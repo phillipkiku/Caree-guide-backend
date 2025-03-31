@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "career"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Careerimage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "newsfeed": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::newsfeed.newsfeed",
+      "mappedBy": "career"
+    }
+  }
+}

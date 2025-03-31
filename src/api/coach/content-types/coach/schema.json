@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coaches",
+  "info": {
+    "singularName": "coach",
+    "pluralName": "coaches",
+    "displayName": "coach",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "BIO": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

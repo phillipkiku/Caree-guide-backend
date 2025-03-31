@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsfeeds",
+  "info": {
+    "singularName": "newsfeed",
+    "pluralName": "newsfeeds",
+    "displayName": "newsfeed",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "newsfeed_title": {
+      "type": "string",
+      "required": true
+    },
+    "newsfeed_description": {
+      "type": "text",
+      "required": true
+    },
+    "newsfeed_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "newsfeed_media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "career": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::career.career",
+      "inversedBy": "newsfeed"
+    }
+  }
+}

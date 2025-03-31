@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Article_Title": {
+      "type": "text",
+      "required": true
+    },
+    "Article_Description": {
+      "type": "string",
+      "required": true
+    },
+    "Article_readmore": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
